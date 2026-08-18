@@ -11,7 +11,7 @@ import { getCanvasPixelValues, getImagePixelValues, pixelValuesMatch, checkCanva
          advanceToFrame,
          checkOrderedPairOfShapes,
          testSettingIsCalled,
-         checkAllRectsHaveMode} from "../../lib/test-utils.js";
+         checkAllRectsHaveMode} from "https://cdn.jsdelivr.net/gh/Supportive-IDE/p5js-testing-demo@main/p5jsTestingLibrary.js";
 /**
  * A hacky solution to wait for p5js to load the canvas. Include in all exercise test files.
  */
@@ -44,7 +44,7 @@ async function runTests(canvas) {
         checkAllRectsHaveMode(CENTER, actualShapes);
     } else {
         checkCanvasSize(300, 300);
-        checkSettingCalledBeforeShapes(BACKGROUND, true, true);
+        checkSettingCalledBeforeShapes(BACKGROUND.re, "background()", true, true);
         checkBackground(color(255), "white");
         const expectedShapes = [new TestSquare(50, 50, 100, CENTER, true, true, color(0)),
                                 new TestSquare(150, 150, 100, CENTER, true, true, color(0)),
@@ -57,7 +57,7 @@ async function runTests(canvas) {
         checkOrderedPairOfShapes(expectedShapes[1], expectedShapes[4], actualShapes, false);
         checkOrderedPairOfShapes(expectedShapes[2], expectedShapes[5], actualShapes, false);
         checkAllRectsHaveMode(CENTER, actualShapes);
-        if (testSettingIsCalled(NO_STROKE, true, true)) {
+        if (testSettingIsCalled(NO_STROKE.re, true, true)) {
             TestResults.addWarning("<code>noStroke()</code> is called. The shapes in the expected output have the default stroke. If you are confident your shapes match otherwise, remove <code>noStroke()</code> and all tests should pass.");
         }
     }

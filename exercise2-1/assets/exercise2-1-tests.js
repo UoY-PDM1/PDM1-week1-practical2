@@ -5,7 +5,7 @@ import { getCanvasPixelValues, getImagePixelValues, pixelValuesMatch, checkCanva
          TestSquare,
          checkShapesWithMultipleSolutions,
          advanceToFrame,
-         checkBackgroundIsCalledInDraw} from "../../lib/test-utils.js";
+         checkBackgroundIsCalledInDraw} from "https://cdn.jsdelivr.net/gh/Supportive-IDE/p5js-testing-demo@main/p5jsTestingLibrary.js";
 /**
  * A hacky solution to wait for p5js to load the canvas. Include in all exercise test files.
  */
@@ -29,7 +29,7 @@ async function runTests(canvas) {
         TestResults.addPass("Your sketch exactly matches the expected output!");
     } else {
         checkCanvasSize(400, 400);
-        checkSettingCalledBeforeShapes(NO_STROKE, true, true);
+        checkSettingCalledBeforeShapes(NO_STROKE.re, "noStroke()", true, true);
         checkBackgroundIsCalledInDraw();
         const backgrounds = [];
         // black square and grey square, white background

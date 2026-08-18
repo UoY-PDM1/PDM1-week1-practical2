@@ -4,10 +4,9 @@ import { getCanvasPixelValues, getImagePixelValues, pixelValuesMatch, checkCanva
          BACKGROUND,
          getLastBackgroundCallBeforeShapes,
          convertArgStringToColor,
-         getArgString,
          coloursMatch,
          advanceToFrame,
-         canvasStatus} from "../../lib/test-utils.js";
+         canvasStatus} from "https://cdn.jsdelivr.net/gh/Supportive-IDE/p5js-testing-demo@main/p5jsTestingLibrary.js";
 /**
  * A hacky solution to wait for p5js to load the canvas. Include in all exercise test files.
  */
@@ -72,7 +71,7 @@ async function runTests(canvas) {
     } else {
         TestResults.addFail("Your sketch does not match the expected output. Check the other test results to find out why. If there are no other failing tests, then it is likely the shapes you have drawn aren't quite right. Look carefully at each shape's position and dimensions.");
         checkCanvasSize(300, 300);
-        checkSettingCalledBeforeShapes(BACKGROUND, true, true);
+        checkSettingCalledBeforeShapes(BACKGROUND.re, "background()", true, true);
         checkAllPossibleColourCombinations();
     }
     TestResults.display(resultsDiv);

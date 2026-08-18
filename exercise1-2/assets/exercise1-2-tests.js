@@ -1,5 +1,5 @@
 import { getCanvasPixelValues, getImagePixelValues, pixelValuesMatch, checkCanvasSize, checkBackground,
-         checkStrokeColour, TestResults, TestLine, checkShapes, getShapes, advanceToFrame } from "../../lib/test-utils.js";
+         checkStrokeColour, TestResults, TestLine, checkShapes, getShapes, advanceToFrame } from "https://cdn.jsdelivr.net/gh/Supportive-IDE/p5js-testing-demo@main/p5jsTestingLibrary.js";
 /**
  * A hacky solution to wait for p5js to load the canvas. Include in all exercise test files.
  */
