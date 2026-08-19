@@ -24,7 +24,7 @@ function waitForP5() {
 
 
 async function runTests(canvas) {
-    advanceToFrame(2);
+    await advanceToFrame(2);
     const canvasPixels = getCanvasPixelValues(canvas);
     const solutionPixels1 = await getImagePixelValues("./assets/exercise2-3.png", 600, 600);
     const resultsDiv = document.getElementById("results");
